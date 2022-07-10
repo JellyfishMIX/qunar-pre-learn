@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <properties>
+        <property name="logPath">/Users/qianshijie/Programming/log/qunar-pre-learn</property>
+    </properties>
+    <appenders>
+        <console name="Console" target="SYSTEM_OUT">
+            <!-- 输出日志的格式   %d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间     %p : 日志输出格式     %c : logger的名称     %m : 日志内容，即 logger.info("message")     %n : 换行符     %C : Java类名     %L : 日志输出所在行数     %M : 日志输出所在方法名     hostName : 本地机器名     hostAddress : 本地ip地址 -->
+            <PatternLayout pattern="%d %highlight{%-5level}{ERROR=Bright RED, WARN=Bright Yellow, INFO=Bright Green, DEBUG=Bright Cyan, TRACE=Bright White} %style{[%t]}{bright,magenta} %style{%c{1.}.%M(%L)}{cyan}: %msg%n"/>
+        </console>
+    </appenders>
+    <loggers>
+        <!-- 设置自定义包下的日志只打印 DEBUG 及以上级别的日志，name 指生效的包名，不能为空 -->
+        <!--<logger name="debugLogger" level="DEBUG" additivity="false">-->
+        <!--    <appender-ref ref="Console"/>-->
+        <!--</logger>-->
+
+        <!-- 设置一个除上述 loggers 以外，默认的 root 的 logger。即默认使用的 logger -->
+        <root level="DEBUG">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>
