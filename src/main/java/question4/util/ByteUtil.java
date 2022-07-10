@@ -1,5 +1,6 @@
 package question4.util;
 
+import com.google.common.annotations.Beta;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.ByteArrayInputStream;
@@ -13,10 +14,12 @@ import java.util.List;
  * byte 工具类
  *
  * @deprecated 未使用，暂时废弃
+ * @beta 仅编写，未经过测试，不保证功能的可用
  * @author JellyfishMIX
  * @date 7/9/22 02:25
  */
 @Slf4j
+@Beta
 public class ByteUtil {
     public List<String> bytesToStringList(byte[] bytes) {
         Object object = null;
