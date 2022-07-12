@@ -31,7 +31,7 @@ public class SocketClient {
             outPrint = new PrintStream(server.getOutputStream());
             Scanner inputScanner = new Scanner(System.in);
             while (true) {
-                // 举例输入：https://www.jianshu.com/shakespeare/v2/notes/9043243df546/book
+                // 举例输入：https://www.jianshu.com/shakespeare/v2/notes/9043243df546/book（需要以 http:// 或 https:// 开头）
                 String scannedString = inputScanner.nextLine();
                 if (SocketConstant.CLIENT_EXIT.equals(scannedString)) {
                     break;
